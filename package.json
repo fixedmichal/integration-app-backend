@@ -5,14 +5,14 @@
   "scripts": {
     "start": "concurrently --kill-others -n frontend,api -c \"#1569C4,#D9224C\" \"npm run start:fe\" \"npm run start:api\"",
     "start:fe": "nx serve frontend",
-    "start:api": "npx nx serve api",
+    "start:api": "nx serve api",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --schema=./prisma/schema.prisma",
     "api:doc:update": "cd swagger && npx redoc-cli bundle -o index.html swagger.yml",
     "api:doc": "npx http-server ./swagger --port 4242",
     "studio": "prisma studio",
-    "build": "npx nx build",
-    "test": "npx nx test",
+    "build": "nx build",
+    "test": "nx test",
     "postinstall": "npm run prisma:migrate && npm run prisma:generate"
   },
   "private": true,
