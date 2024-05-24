@@ -11,8 +11,8 @@
     "api:doc:update": "cd swagger && npx redoc-cli bundle -o index.html swagger.yml",
     "api:doc": "npx http-server ./swagger --port 4242",
     "studio": "prisma studio",
-    "build": "nx build",
-    "test": "nx test",
+    "build": "npx nx build",
+    "test": "npx nx test",
     "postinstall": "npm run prisma:migrate && npm run prisma:generate"
   },
   "private": true,
